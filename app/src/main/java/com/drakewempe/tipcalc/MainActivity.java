@@ -3,10 +3,12 @@ package com.drakewempe.tipcalc;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -32,8 +34,9 @@ and the total with the tip included.
 
 
 public class MainActivity extends ActionBarActivity {
-    public static final String MY_PREFERENCES = "preferencesFile";
-
+    public static final String MY_PREFERENCES = "preferences.xml";
+    //final EditText priceField,tipField;
+    //final TextView tipResult,plusPrice,totalResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,10 +88,13 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        SharedPreferences.Editor settingsEditor = getSharedPreferences(MY_PREFERENCES,MODE_PRIVATE).edit();
-        settingsEditor.putInt("defaultTip",20);
-        settingsEditor.commit();
+        //SharedPreferences.Editor settingsEditor = getSharedPreferences(MY_PREFERENCES,MODE_PRIVATE).edit();
+        //String tipFromPreferences = settingsEditor.getClass();
 
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        String tipFromPreferences = sp.getString("listPref","20");
+        Log.v("debug", tipFromPreferences);
+        //tipField.setText(tipFromPreferences);
 
 
 
@@ -148,5 +154,25 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        final EditText priceField,tipField;
+        final TextView tipResult,plusPrice,totalResult;
+        tipField = (EditText)findViewById(R.id.numberFieldTipPercent);
+        priceField = (EditText)findViewById(R.id.numberFieldEnterPrice);
+        tipResult = (TextView)findViewById(R.id.tip);
+        plusPrice = (TextView)findViewById(R.id.plusPrice);
+        totalResult = (TextView)findViewById(R.id.total);
+
+
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        String tipFromPreferences = sp.getString("listPref","20");
+        Log.v("debug", tipFromPreferences);
+        tipField.setText(tipFromPreferences);
+        updateResults(priceField,tipField,tipResult,plusPrice,totalResult);
+
     }
 }

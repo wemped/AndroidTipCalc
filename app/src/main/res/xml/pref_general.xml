@@ -10,7 +10,7 @@
             android:title="Change default tip %"
             android:summary="%s"
             android:key="listPref"
-            android:defaultValue="1"
+            android:defaultValue="20"
             android:entries="@array/percent_list"
             android:entryValues="@array/percent_values" />
 
