@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TipCalc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty"></string>
+    <string name="instructions_enter_price">Enter Price</string>
+    <string name="instructions_enter_tip">Enter Tip %</string>
+    <string name="percent">20</string>
+    <string name="tip_title">Tip</string>
+    <string name="plus_price">+ 0.00</string>
+    <string name="total_title">Total w/ Tip</string>
+    <string name="zero_dollars">$0.00</string>
+    <string name="price_ex">0.00</string>
+    <string name="title_activity_my_settings">Settings</string>
+    <string name="default_tip_setting_title">Default Tip Amount</string>
+    <string name="default_tip_15">15%</string>
+    <string name="default_tip_20">20%</string>
+    <string name="default_tip_25">25%</string>
+    <string name="default_tip_30">30%</string>
+
+
+</resources>

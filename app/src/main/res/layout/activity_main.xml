@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/instructions_enter_price"
+        android:id="@+id/textEnterPrice"
+        android:layout_above="@+id/numberFieldEnterPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/numberFieldEnterPrice"
+        android:text="@string/empty"
+        android:textSize="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:singleLine="true"
+        android:hint="@string/price_ex" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/numberFieldTipPercent"
+        android:text="@string/percent"
+        android:textSize="35sp"
+        android:layout_above="@+id/textEnterPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textEnd"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/instructions_enter_tip"
+        android:id="@+id/instrutctionsEnterTip"
+        android:layout_above="@+id/numberFieldTipPercent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tip_title"
+        android:id="@+id/tipTitle"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/zero_dollars"
+        android:id="@+id/tip"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="#ff1ea237"
+        android:singleLine="true"
+        android:maxWidth="400dp"
+        android:layout_alignBottom="@+id/tipTitle"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/plus_price"
+        android:id="@+id/plusPrice"
+        android:textSize="25sp"
+        android:layout_marginTop="55dp"
+        android:textStyle="italic"
+        android:layout_alignStart="@+id/total"
+        android:layout_above="@+id/total"
+        android:singleLine="true"
+        android:maxWidth="400dp"
+        android:layout_alignRight="@+id/tip"
+        android:layout_alignEnd="@+id/tip"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/totalTitle"
+        android:text="@string/total_title"
+        android:layout_below="@+id/tipTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="103dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/zero_dollars"
+        android:id="@+id/total"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/totalTitle"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:maxWidth="300dp" />
+
+</RelativeLayout>

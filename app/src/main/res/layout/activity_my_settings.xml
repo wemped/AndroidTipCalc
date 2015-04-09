@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.drakewempe.tipcalc.MySettingsActivity"
+    android:id="@+id/settingsLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/default_tip_setting_title"
+        android:id="@+id/defaultTipInstruction"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/defaultTipRadioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_tip_15"
+            android:id="@+id/defaultTip15"
+            android:checked="false"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_tip_20"
+            android:id="@+id/defaultTip20"
+            android:checked="false"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_tip_25"
+            android:id="@+id/defaultTip25"
+            android:checked="false"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_tip_30"
+            android:id="@+id/defaultTip30"
+            android:checked="false"
+            android:layout_gravity="right" />
+    </RadioGroup>
+
+</RelativeLayout>
